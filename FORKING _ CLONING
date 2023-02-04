@@ -1,0 +1,76 @@
+CLONING/CREATING BRANCH/CONTRIBUTING/PULL REQUEST
+-fork the project and copy the url
+-go to commandline 
+-create new project folder(on commangline):  chdir "C:\Users\kolex\Documents\new project
+OR crete folder in Document
+-cd C:\Users\kolex\Documents\new project
+-type git clone + url (url of the forked/upstream project)
+
+OPTIONAL: If you need to pull update from the MAIN project, you need to add remote upstream:
+-git remote add upstream URL_TO_UPSTREAM_REPO 
+-if u are pull into a branch make sure u are on that branch e.g buquio or upstream etc
+-git pull upstream BRANCH_TO_PULL(BRANCH U NEED)OR git pull upstream(I.E ALL UPSTREAM)
+or git pull upstream === TO Fetch & Merge in upstream changes(3 steps below) 
+-git fetch upstream
+-git checkout master
+-git merge upstream/master
+
+  
+-open the project in Vscode editor OR on command line- type code .
+-cd into the project i.e cd C:\Users\kolex\Documents\first-contributions
+
+OPTION A  -IF U ARE DOING A FRESH WORK ON A NEW BRANCH
+-go to Vscode terminal create a branch e.g git branch buquio
+-cd into the branch  i.e -git checkout buquio
+-go to Vscode editor edit/update/add to contributions.md file
+-go to commmandline/Vscode terminal type -git status(you see the changes indicated)
+-git add contributions.md OR git add .
+-git commit -m "Add <your-name> to Contributors list"
+-git push origin <add-your-branch-name> e.g git push origin buquio OR git push upstream buquio
+-Create PR.
+
+
+OPTION B -IF U NEED TO COPY THE CONTENT IN master-baranch or dev-branch INTO UR new branch
+-Switch to the branch u want to copy from e.g master-baranch or dev-branch
+-Create a newbranch for your task git checkout -b <branchname>
+-After changes :
+-git add .
+-git commit -m "some comments"
+-git push origin <name of your branch>
+-Create PR.
+
+THEN MAKING PULL REQUEST TO A PROJECT YOU FORKED.
+-go to your repository on GitHub, you'll see a Compare & pull request button. Click on that button.
+-Now submit the pull request by clicking "create pull request" button
+
+
+
+////////////
+error: you need to resolve your current index first
+README.md: needs merge
+SOLUTION you can abort your merge using:
+
+$ git reset --merge
+
+////////////
+TO REMOVE ADDED REMOTE
+-first do git remote -v
+-git remote rm upstream
+
+/////////
+Contribution Guide
+Go to zuri-training/FundMe-be-pjt- and fork the repo.
+After forking, go to your github page and Clone your forked repo.
+Create a project folder on your local machine.
+Navigate to it in the terminal. Run: git clone https://github.com/<your github username>/FundMe-fe-pjt-96
+Switch to the branch u want to copy from e.g master-baranch or dev-branch
+Create a newbranch for your task git checkout -b <branchname>
+Go to the appropraite file xxx.html do all ur work, After changes :
+git add .
+git commit -m "some comments"
+git push origin <name of your branch>
+Create PR.
+HOW TO CREATE PULL REQUEST ON ZURI-GITHUB-PROJECT BOARD
+Go to zuri github,click pull requset, click compare across forks, selcect dev(in box 1)& select ur branch(in box 2), click create pull request, add title & comment. then click pull request. 
+
+

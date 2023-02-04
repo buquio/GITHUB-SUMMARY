@@ -1,0 +1,76 @@
+logs -ignores all logs
+
+index.txt -ignores index.txt only
+
+.txt -ignores all files with .txt and/or .txt extension
+
+*.txt -ignores all files with .txt extension
+
+.mp4 -ignores all files with .mp4 extension
+
+.exe -ignores all files with .exe extension
+
+video.* -ignores all files that has 'video' in their with name regardless of thier extension
+
+video* -ignores all files that has 'video' at the start of their name regardless of thier extension 
+
+npm-debug.log* ignores all files that has 'npm-debug.log*
+' at the start of their name 
+
+FOLDERS
+Temp/ -ignores all Temp files in all the directories
+
+Temp/Survey -ignores Survey files inside the Temp directories
+
+Temp/* -ignores Temp folders in the root directory 
+
+*/Temp/*  -ignores all Temp folders within a the Temp folder
+
+Temp/* + */Temp/* -ignores all Temp folders within folders and the root directory
+
+NOTE; to ignore if your file has comment e.g #landers - \#landers
+
+!video/Temp/* -ignores all Temp folders except the one in the video folders.
+
+!video/.gitkeep -ignores all Video folders except the gitkeep file
+OR CREATE another git ignore in the video folder
+
+TO IGNORE ALL FILES INSIDE A FOLDER- Temp/
+
+TO IGNORE FOLDERS INSIDE A FOLDER-
+fontawsome/*  ???
+OR
+fontawsome/
+fontawsome/*
+//OR
+ Create the .gitignore in the MAIN folder with:
+*/*
+
+TO IGNORE ONLY THE SUBFOLDERS BUT NOT IGNORE FILES & THE MAIN FOLDER  IN IT 
+!folder/
+folder/*
+////////////
+build/ is the right way to do it. It will ignore any files that are inside build directories no matter how deep are these directories nested in your repo.
+
+*/build/ means ignore build directories that are exactly one level deep inside your repo
+XXXXXXXXXXCOMPLEX
+./src/build -ignores
+src/build -
+
+
+libraries/* -ignores all libraries folder and all the folders in it
+
+libraries/external-library.jar -ignores folder path libraries/external-library.jar
+
+/libraries/** -ignores  
+
+/libraries/*/external-library.jar -ignores 
+
+/[Ll]ibraries/ -ignores 
+
+/[Ll]ibraries/* -ignores 
+
+external-library.jar -ignores
+
+
+

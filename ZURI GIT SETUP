@@ -1,0 +1,60 @@
+
+There isn’t a one method fix, there are soo many ways to skin a rabbit. Just pick the one that works for you. Keep it simple, and move forward.
+1.	Accept the git invite
+2.	Click on the Fork button to fork the repo
+3.	Notice the url change from https://github.com/zuri-training /kidvacc-fe-pjt-21 to https://github.com/tuck183/kidvacc-fe-pjt-21
+ 
+4.  Create project folder in your local root– for laragon users, this would be your www folder
+5.	Open cmd line
+6.	Locate the project folder in cmd line
+7.	Initialize git using git init
+8.	Set origin and upstream
+9.	Upstream refers to the zuri repo
+10.	Origin refers to the forked repo
+11.	Add origin = git remote add origin https://github.com/tuck183/kidvacc-fe-pjt-21.git
+12.	Add upstream = git remote add upstream https://github.com/zuri-training /kidvacc-fe-pjt-21.git
+ 
+13.	To check if added  use git remote –v
+14.	Fetch origin using: git fetch origin (SAME AS git clone)
+15. open the project in Vscode: code .
+15.	git checkout dev or git checkout main or the branch you want to checkout
+
+16.	After working on your own file
+17.	Add the files to git using git add .
+18.	Commit your files using git commit –m “message”
+3.	git pull upstream dev   OR 	 git pull upstream main
+19.	Push your files to your origin using: git push origin dev OR git push origin main
+20.	After pushing create pull request from your github page
+
+ 
+
+////Maintaining update with the Upstream(same as last segment above)
+1.	git add .
+2.	git commit –m “message”
+3.	git pull upstream dev
+4.	git push origin main or git push origin dev
+5.	Create PR
+
+////One line code:
+git add . && git commit –m “message” && git pull upstream main && git push origin main
+or
+git add . && git commit –m “message” && git pull upstream dev && git push origin dev
+
+
+////To overwrite all your conflict
+-git push origin head:main  or  git push origin head:main--force
+Head: is your most recent commit
+
+
+
+
+////Maintainers/Triage – Maintaining Projects
+1.	Create project
+2.	Create issues
+3.	Link issues to pull request
+
+/////Maintainers/Triage – Reviewing PR
+1.	Open pull requests on the zuri repo
+2.	View single pull requests
+3.	Observe, merge or close
+

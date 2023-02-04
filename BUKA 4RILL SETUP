@@ -1,0 +1,34 @@
+HOW TO START YOUR PROJECT SETUP
+-create a new repo on github + readme + gitignore + gitignore template- node
+-copy the url
+-create a folder e.g TutoringApp in my document
+-right click in document & select 'gitbash here' to open commandline then do the below
+-do git clone + url
+-cd TutoringApp
+CREATE YOUR OWN BRANCH
+-git branch -a :to see all branches
+you will see main branch but create your own development branch
+-git branch dev: new branch
+-git checkout dev: inside new dev branch
+-code .
+
+/////////////////backend installations
+-npm init -y
+-npm install express Express validator Jsonwebtoken bcrypt dotenv 
+-npm install -D nodemon
+-in your package.json change your main: to server.js
+
+
+/////////////
+-push your changes to github
+-click the git source control icon
+-click top '+' icon to stage all changes
+-to commit changes also click at the top and add commit message
+-then click ✔ icon 
+////OR git init, git add. git commit FOR THE ABOVE
+
+- then push to github by:
+1.click on branch at the bottom of vscode
+-click dev branch on the prompt shown above- it is pushed
+2.git push origin dev
+NOTE:always remember to push to dev branch and main/master as needed       

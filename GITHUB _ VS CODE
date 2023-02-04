@@ -1,0 +1,269 @@
+NOTE:Commandline/Vs Code on  Window not on Mac/Linux
+HOW TO:
+- change to diff. directory => chdir "C:\Users\kolex\Documents\davidrepo"
+- create Directory => mkdir "C:\Users\kolex\Documents\davidrepo" OR  mkdir davidrepo(make sure ure inthe right directory e.g C:\Users\kolex\Documents)
+-enter into the the Directory =>cd "C:\Users\kolex\Documents\davidrepo"
+- To create file inside a directory => cd >index.html  OR code index.html
+- listing all files& folders in a directory => dir or ls
+- listing all directory content => $ dir C:\windows 
+- home directory => C:\Users\kolex
+- check what directory am in =>  cd 
+- navigate relative directory =>C:\ 
+- to clear screen => cls
+- navigate 1 directory up => cd..
+- to view origin =>git remote-v
+- c)To list all files & folders => dir Desktop\david repo
+
+
+How To set your global username/email configuration:
+-git config --global user.name "FIRST_NAME LAST_NAME"
+-git config --global user.email "MY_NAME@example.com"
+
+How to Verify your configuration by displaying your configuration file:=> cat .git/config
+-git config --global user.email "xyz@gmail.com"
+-git config --global user.name xyz
+-git config --global user.username xyz
+
+To Check these values have been set or not:git config --global --list
+
+-C:\Windows\system32> =>   git config --system --unset credential.helper
+-git rm --cached <filename>. Absolutely critical for repos that existed BEFORE you created the .gitignore 
+
+1.How to create Directory/Folders on commandline/Vs-terminal
+-mkdir "C:\Users\kolex\Documents\davidrepo
+-OR mkdir davidrepo (make sure u're in the right directory e.g document by typing chdir "C:\Users\kolex\Documents)
+-cd "C:\Users\kolex\Documents\davidrepo
+-you can add files into it
+-cd >index.html
+-cd >home.html
+
+b)To create folder inside a directory/folder
+-e.g  md images
+NOTE:touch index.html is to create file on MAC comandline only
+
+1b. how to create Project Folders/files on your local computer
+-right click on an empty space on my Documents
+-select folder, then enter the folder/project name
+-double click to open the folder
+-right click inside the folder & select new, then select text document
+-rename the text document and the .txt on it e.g index.html or style.css
+
+
+
+
+
+---------------------------------------------------------------
+STARTING YOUR NEW PROJECT 
+3.Create repository on github 
+-open your github account
+-click '+'BUTTON and select New repository
+-enter repository name (only) e.g Tribute page project
+-click create repository (you will see some steps follow it [same as below])
+-open the command line (type each command below & press ENTER)
+-echo "# Tribute-page-project" >> README.md
+-git init
+-git add README.md
+-git commit -m "first commit"
+-git remote add origin https://github.com/buquio/Tribute-page-project.git
+-git push -u origin master
+
+            
+-----------------------------------------------------------------------
+4a. Pushing existing project to github repository
+-open existing directory e.g cd "C:\users\okosisi\document\Tribute-page-project
+-git init
+-Create repository on github 
+-open your github account
+-click '+'BUTTON and select New repository
+-enter repository name (only) e.g Tribute page project
+-click create repository 
+-copy the url from the repository
+-go to commandline or vscode terminal
+-git remote add origin + url e.g git remote add origin https://github.com/buquio/Tribute-page-project.git						   
+-git add .
+-git status
+-git commit -m "initial commit"
+-git push --set-upstream origin master
+
+
+4b.Pushing existing directory to github repository on github- Method 2
+-create a new repository + readme file
+-open the repository
+-click upload files
+-copy the local directory/files
+-paste it inside the space of upload files on github
+-add commit message
+-check/tick master branch
+-click commit changes
+-go to command line
+-git remote add origin https://github.com/buquio/Tribute-page-project.git
+-git push -u origin master 
+-or git push --set -upstream origin master
+
+
+5.Clonining/Copying Repository to local computer form your own github account.
+-open the respository(already created) on github
+-click on copy and copy the link-url
+-go to commandline or terminal
+-navigate to the directory by typing e.g chdir "C:\Users\kolex\Documents OR cd Documents 
+-click ENTER
+-type git clone + link-url
+NOTE:ONCE you clone you already have the project on your computer
+-go to Documents on your system,look for the project name & open in Vs code.
+YOU CAN NOW WORK ON THE CODE AS YOU LIKE, THIS IS NOW YOUR OWN COPY
+YOU CAN THEN PUSH IT TO GITHUB 
+-git add . 
+-git commit
+-git push --set -upstream origin master
+YOU CAN THEN ALSO SHARE THE LINK TO OTHERS
+
+
+XXXXHow to signoff on a commit
+git commit --signoff -m "added pull request template"
+
+
+6.Forking Repository from another account
+-open another person's github account using their url
+-then click fork to fork the project
+-click and copy the url
+-go to commandline
+-navigate to directory e.g chdir "C:\Users\kolex\Documents
+-type git clone + url
+NOTE:ONCE you clone you already have remote origin i.e no need for git remote add origin
+-do ls to see the file inside
+-do cd to see inside the folder
+-git add .
+-git commit
+-git push 
+OPTIONAL but IF YOU DECIDE/NEED TO PULL UPDATE from the MAIN PROJECT 
+you need to add another remote upstream:
+-git remote add upstream + URL_TO_MAIN_REPO 
+-git pull upstream BRANCH_TO_PULL
+
+
+
+
+7a.How to create branches on github
+-open a repository
+-click create new branch
+-type branch name e.g sample branch
+-edit or -Make the desire changes
+ on the branch
+-u can do pull request or compare
+-make changes to any file
+-commit changes to sample branch
+-or do pull request to master branch
+
+
+
+7b.How to create branches on Vs code Terminal
+-git branch [branch name] e.g or git branch "buquio-branch" //(Creates a new branch)
+
+-OR git checkout [branch-name] e.g git checkout "buquio-branch" //(creates a new branch & switches you into the branch 
+
+-OR git branch -b [branch-name] e.g git branch -b "buquio-branch" //(creates a new branch, switches you into the branch & copy over all the content of the branch you are on) e.g git checkout -b buquio-branch
+
+-Make the desire changes
+-git add .
+-git commit -m "changes to buquio branch"
+-git status
+-git push-u [origin][branch]
+
+
+7c.How to know which branch am in
+-git branch
+should show all the local branches of your repo. The starred branch is your current branch.
+
+-OR git branch --show-current
+If you want to retrieve only the name of the branch you are on, 
+Note;only work on with Git 2.22 and above:
+﻿
+
+
+8.How to create pull request on a.branches b.forking c.project
+ a.branches
+ -click and select the branch you want to...
+ -click pull request 
+ -click create pull request
+ -rename the title
+ -add comment
+ -click create pull request or click pull request
+ -click file changes & preview
+ *you can preview if u are the contributor (+)
+ -click merge pull request
+ -click confirm merge
+ 
+ 8b.forking +clone + after editting it
+ -create a new pull request inside nina-text github
+ -click the latest commit to see
+ -go to the pull request-1
+ -move to the right & click on pull request
+ -click on new pull request & click on create pull request & put ur title e.g nina pull request
+ -write comment 
+ -click create pull request
+ 
+ 
+ 8c.Merging pull request
+ e.g to merge 2 pull request from nina account to my account e.g btholt project
+ NOTE:i can only merge if i'm the owner or/& have the permission to merge
+ -go to my btholt account()
+ -click on  btholt top right
+ -click repository
+ -click pull request(on list)
+ -click pull request (20)(on list)
+ -click any of the pull request or the nina pull request
+ -click tab-conversation
+ -then go down left & click merge-pull request
+ -then click "confirm pull request"
+ -then click ......../pull request(top left)
+ -then you will see READ.md & mark.txt
+ -u can accept more pull request
+ -u can comment on each line of code at tab- file change.
+
+-
+
+
+
+11.ignoring files and folders
+-Navigate to the location of your Git repository.
+-Create a .gitignore file for your repository eg .gitignore
+-to ignore a file that is already checked in, you must untrack the file locally using git rm -r --cached FILENAME
+-then list all the files/folder you want to ignore inside .gitignore 
+- add file like this:*.txt
+- add folder like this:/[Ll]ibrary/
+-git commit -m "ignored files&folder from repository"
+-git push origin master
+
+You can completely remove using:git rm --cached FILENAME
+you can completely restore using:git restore --staged FILENAMEs
+
+11b to ignore the whole project folder
+-git config --global core.excludesfile ~/.gitignore_global
+
+11c To ignore an entire directory in Git, the easiest way is to include a . gitignore file within the target directory which simply contains "*". dirB/. gitignore then just reads as “*” and all contents are ignored completely, itself and all files!Jul 22, 2010
+
+"*". dirlibraries/.
+*.txt
+*.o
+*.exe
+*.jar
+
+12.How to make master  branch point to a specific commit i.e 1258f0d0aae...
+
+a.If you are currently not on branch master, that's super easy:
+-git branch -f master 0147a053045f37accecbd38526e854ef6579e520
+
+7678bb3ed163b680047332dfa65c036890521728
+
+b.If you are currently on master, you need to get into detached head state first. I'd recommend the following two command sequence:
+
+git checkout 1258f0d0aae    //detach from master
+git branch -f master HEAD   //exactly as above
+
+//optionally reattach to master
+git checkout master
+
+d.git branch -f <branch-name> [<new-tip-commit>]
+If new-tip-commit is omitted it defaults to the current commit.
+
+e.git update-ref -m "reset: Reset <branch> to <new commit>" refs/heads/<branch> <commit>

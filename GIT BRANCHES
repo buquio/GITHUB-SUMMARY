@@ -1,0 +1,34 @@
+METHOD 1
+(better mthd)
+// TO MERGE IN MAIN-BARNCH FIRST CREATE & CD TO BUQUIO-BRANCH 
+1.create branch: 
+-git branch buquio 
+2.cd into the branch:
+-git checkout buquio
+note:to copy the main branch into your buquio branch then do next
+3.MAKE SURE u have done git add., git commit & git push on the main-branch
+4.merge
+-git merge main
+5. do ur coding and changes then:
+-git add .
+6.commit changes
+-git commit -m "buquio commit"
+7.push to buquio-branch
+- (1st time)git push --set-upstream origin buquio OR(other times) git push origin buquio
+
+
+**you can create, switch to dev branch,merge & push to dev branch 
+-git branch dev
+-git checkout dev
+
+METHOD 2
+(avoid this mthd: git checkout -b)
+//If you are working on MAIN BRANCH AND YOU WANT TO CREATE BUQUIO-BARNCH & also COPY all what is in MAIN-BRANCH into BUQUIO-BARNCH at the same time.
+NOTE ALWAYS REMEMBER TO DO git add & git commit on the MAIN-branch  before this
+-git checkout -b buquio: 
+-this create a new branch,cd into the new branch & pull everything from the MAIN-branch into BUQUIO-branch.
+
+7.To delete a branch
+Git will not let you delete the branch you are currently on so you must make sure to checkout a branch that you are NOT deleting. 
+-For example: git checkout master
+-Delete a branch with: git branch -d <branch>.

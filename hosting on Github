@@ -1,0 +1,13 @@
+-create a repository
+-push local directory to the repositoyi.e git init,git add remote,git add,git commit & git push upstream
+-on github refresh
+-go to settings
+-go to github pages
+-click nonoe & change it to master branch
+-click save 
+-it will take you up the page but u need to scroll back down
+-check above the github pages for ur url
+-github will publish ur repository
+at the url
+-click on the url and you will see ur website.
+-copy and send the url to anybody they will view your website

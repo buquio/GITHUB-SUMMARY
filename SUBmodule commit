@@ -1,0 +1,87 @@
+A submodule is its own repo/work-area, with its own .git directory.
+STEP 1
+On commandline or vscode:
+create parent directory(mkdir parent directory) or if there is parent directory
+cd parent directory
+git init  //as needed
+git add .
+git commit -m "created parent directory"
+
+STEP 2
+So,commit/push your submodule's changes:
+create submodue directory(mkdir submodule) or already have submodule.
+$ cd submodule
+$ git init //as needed
+$ git add .
+$ git commit -m "added submodule to parent"
+$ git push
+
+STEP 3
+Then, update your parent directory to track the updated version of the submodule:
+$ cd parent directory
+$ git submodule add ./submodule
+NOTE: TO ADD ALL submodule AT ONCE $ git submodule add .   ?????
+git status (u will see .gitmodules & other files)
+$ git add .
+$ git commit -m "added updated submodule"
+$ git push 
+
+
+
+
+
+////TO CLONE parent directory + submodules
+METHOD1
+The list of steps required to clone a Git repository with submodules is:
+git clone + parent url
+cd parent directory
+git submodule init 
+  
+
+NOTE: The git submodule init and update commands are needed to pull down submodule artifacts and resources.
+When these three steps are complete, both the parent repository and all submodules will be available locally, 
+and files from the master branch of the parent repository and the submodule will be available in their respective git working trees.
+
+METHOD2
+git clone --recurse-submodules https://github.com/cameronmcnz/surface.git (parent repo url)
+
+
+
+//////////////////////////////
+push parent Directory
+-only sub-folders without git is pushed to github
+
+clone parent directory
+-only sub-folders without git is cloned
+
+push sub-folders
+-individually push sub-folders
+
+clone sub-folders
+-cd into parent sub-folders
+-individually clone sub-folders into parent folder
+
+NOTE:if the sub-folder has not been pushed to Github 
+-then i have to push it to github on my old laptop 
+--or by copying to flash drive 
+--or make use of the version/copy i have already on github like that
+
+NOTE: On Github, any parent folder having a folder-with-arrow inside it means its empty & 
+      its corresponding content is in a individual-seperate project in github.
+      -and all the commit/changes will not reflex inside the folder-with-arrow 
+      - commit will only reflex on the individual-seperate project in github
+
+      XXX TO PREVENT THE ABOVE SUITUATION 
+      A. I SHOULD HAVE PUSHED THE PARENT FOLDER INDICATING THAT IT CONTAIN SUB-GIT-FOLDERS
+       -----E.G      $ git submodule add ./submodule
+
+       OR
+       -----E.G   $ git submodule add [submodule URL]
+                   git submodule add https://github.com/buquio/Rest-Country-API
+
+??????WRONG B. you can clone the copy of the individual-seperate project in github with its git into the parent folder 
+       -then delete the git in its and do a new git init
+       -then when your commit, the folder will have the same commit & all chages will reflect on the folder-with-arrow.
+
+
+       
